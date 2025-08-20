@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TecnoTiendaSV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body class="bg-gray-100 min-h-screen p-6">
+  <h1 class="text-4xl font-bold mb-6 text-center text-blue-700">Tienda de Tecnología</h1>
+
+  <div class="mb-8">
+    <div class="flex justify-center gap-4 mb-4">
+      <button onclick="showTab('laptops')" class="px-4 py-2 bg-blue-600 text-white rounded"> <i class="fas fa-laptop"></i> Laptops</button>
+      <button onclick="showTab('keyboards')" class="px-4 py-2 bg-blue-600 text-white rounded"> <i class="fas fa-keyboard"></i> Teclados</button>
+      <button onclick="showTab('mice')" class="px-4 py-2 bg-blue-600 text-white rounded"> <i class="fas fa-mouse"></i> Ratones</button>
+    </div>
+
+    <style>
+      #product{
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.1);
+      }
+
+      #container{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 30px;
+      }
+
+      #product img{
+        width: 70%;
+        height: 60%;
+        margin: auto;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        align-items: center;
+      }
+
+      #descript{
+        text-align: center;
+      }
+
+      #descript h3{
+        font-size: 24px;
+      }
+
+      #descript p{
+        font-size: 18px;
+      }
+    </style>
+
+
+
+  <div class="max-w-md mx-auto bg-white p-6 rounded-2xl shadow-md">
+    <h2 class="text-2xl font-semibold mb-4 text-gray-800">
+      <i class="fas fa-user-plus"></i> Registro de Clientes
+    </h2>
+    <form id="clientForm" class="space-y-4" action="custConnect.php" method="post">
+      <input type="text" name="name" id="name" placeholder="Nombre completo" required class="w-full px-4 py-2 border rounded">
+      <input type="email" name="email" id="email" placeholder="Correo electrónico" required class="w-full px-4 py-2 border rounded">
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded">Registrar</button>
+    </form>
+    <div id="confirmation" class="text-green-600 mt-4 hidden">Cliente registrado correctamente.</div>
+  </div>
+
+<!--  <script>
+    function showTab(tabId) {
+      document.querySelectorAll('.tab-content').forEach(tab => tab.classList.add('hidden'));
+      document.getElementById(tabId).classList.remove('hidden');
+    }
+
+    document.getElementById('clientForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+
+      console.log('Cliente registrado:', { name, email });
+
+      document.getElementById('clientForm').reset();
+      document.getElementById('confirmation').classList.remove('hidden');
+    });
+  </script>-->
+</body>
+</html>

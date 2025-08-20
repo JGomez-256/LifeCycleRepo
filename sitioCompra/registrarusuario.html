@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuevo usuario de TecnoTiendaSV</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Encabezado -->
+  <header class="text-center py-6 bg-white shadow">
+    <h1 class="text-3xl font-bold text-blue-600">Registrarse</h1>
+  </header>
+
+  <!-- Formulario de venta -->
+  <main class="max-w-3xl mx-auto mt-10 bg-white shadow-lg rounded-xl p-6">
+    <h2 class="text-xl font-semibold mb-6">Nuevo usuario</h2>
+
+    <form action="signup.php" method="post">
+      <div class="mb-4">
+        <input type="hidden" id="userid" name="userid" value="000"/>
+      </div>
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Nombre</label>
+        <input type="text" placeholder="Nombre del cliente" id="username" name="username" class="w-full px-4 py-2 border rounded focus:ring focus:outline-none" />
+      </div>
+
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Correo</label>
+        <input type="text" placeholder="Correo del cliente" id="email" name="email" class="w-full px-4 py-2 border rounded focus:ring focus:outline-none" />
+      </div>
+
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Dirección</label>
+        <input type="text" placeholder="Dirección del cliente" id="address" name="address" class="w-full px-4 py-2 border rounded focus:ring focus:outline-none" />
+      </div>
+
+      <div class="mb-4">
+        <label class="block font-medium mb-1">Contraseña</label>
+        <input type="password" placeholder="Contraseña" id="userpass" name="userpass" class="w-full px-4 py-2 border rounded focus:ring focus:outline-none" />
+      </div>
+
+      <div class="mb-6">
+        <label class="block font-medium mb-1">Fecha</label>
+        <input type="date" id="fecha" name="fecha" class="w-full px-4 py-2 border rounded focus:ring focus:outline-none" />
+      </div>
+
+      <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">Registrarse</button>
+    </form>
+  </main>
+
+</body>
+</html>
